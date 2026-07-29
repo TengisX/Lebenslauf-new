@@ -1,0 +1,200 @@
+#+begin_src emacs-lisp :exports none
+  (setq  calendar-month-abbrev-array ["Jan" "Feb" "Mrz" "Apr" "May" "Jun" "Jul" "Aug" "Sept" "Okt" "Nov" "Dez"])
+  (setq texname (format "%s.tex" (file-name-sans-extension buffer-file-name)))
+  (org-export-to-file 'awesomecv texname)
+  (org-latex-compile texname)
+  (setq calendar-month-abbrev-array (eval (car (get 'calendar-month-abbrev-array 'standard-value))))
+#+end_src
+ 
+#+RESULTS:
+: ["Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"]
+ 
+:org-cv-settings:
+# CV color - options include: 'awesome-red (default), 'awesome-emerald,
+# 'awesome-skyblue', 'awesome-pink', 'awesome-orange', 'awesome-nephritis',
+# 'awesome-concrete' and 'awesome-darknight', plus any standard color names.
+#+CVCOLOR: darkblue
+# Specify the position and style of the photo
+#+PHOTOSTYLE: left,rectangle,noedge
+#+LATEX_TITLE: \makecvheader[R]
+#+LATEX_HEADER: \usepackage{wrapfig}
+#+LATEX_HEADER: \usepackage[none]{hyphenat}
+#+LATEX_CLASS_OPTIONS: [a4paper]
+# #+LATEX_HEADER: \usepackage[ngerman]{babel}
+# #+LATEX_HEADER: \usepackage[german]{isodate}
+#+OPTIONS: toc:nil
+:end:
+#+STARTUP: hideblocks
+#+TITLE: Lebenslauf
+ 
+:personal-info:
+#+AUTHOR: Zenghan Jia
+#+email: zh.j@web.de
+#+options: tags:nil
+ 
+#+ADDRESS: Stöckwiesenstraße 8, 70771 Leinfelden-Echterdingen, Deutschland
+#+MOBILE: (+49) 176-65265298
+# #+HOMEPAGE: example.com
+# #+GITHUB: Titan-C
+# #+GITLAB: Titan-C
+#+LINKEDIN: zenghan-jia
+#+PHOTO: ../bilder/passfoto.png
+:end:
+ 
+#+latex: \sloppy
+Berechnungsingenieur und Doktorand mit langjähriger Erfahrung in der Entwicklung numerischer Verfahren und Materialmodelle für kommerzielle Finite-Elemente-Solver. Schwerpunkte liegen in der nichtlinearen Mechanik, Kristallplastizität, Mehrskalenmodellierung und wissenschaftlichen Softwareentwicklung, insbesondere in der Modellierung des Materialverhaltens auf der Mikrometerskala. Fundierte Erfahrung in der Entwicklung effizienter Simulationsalgorithmen sowie in der Überführung wissenschaftlicher Methoden in industrielle Anwendungen.
+#+latex: \par
+* Beruflicher Werdegang                                           :cventries:
+:PROPERTIES:
+:END:
+** Doktorand                                           :cventry:
+:PROPERTIES:
+:FROM:     <2023-06-01>
+:TO:       aktuell
+:LOCATION: Renningen, Deutschland
+:EMPLOYER: Robert Bosch GmbH
+:END:
+Thema: „Größeneffekt in der mikromechanischen Fatigue-Modellierung“
+- Entwicklung mikromechanischer Fatigue-Modelle auf Basis der Kristallplastizität unter Berücksichtigung von Größeneffekten
+- Konzeption und Implementierung numerischer Algorithmen für Materialmodelle (UMAT/UEL, Abaqus), u. a. für steife ODE-Systeme
+- Entwicklung robuster Lösungsverfahren für hochgradig nichtlineare Gleichungssysteme
+- Entwicklung automatisierter Simulationsworkflows (Python, OOP, JSON)
+- Validierung der Modelle anhand experimenteller Dauerfestigkeitsdaten im HCF-Bereich
+- *Referenzperson*: Dr. Ralf Westerheide (Gruppenleiter CR/AMP3, +49(173)5341832)
+ 
+** CAE-Softwareingenieur  (PERMAS)                    :cventry:
+:PROPERTIES:
+:FROM:     <2019-09-01>
+:TO:     <2023-04-01>
+:LOCATION: Stuttgart, Deutschland
+:EMPLOYER: Ingenieurgesellschaft für Technische Software mbH (INTES GmbH)
+:END:
+Spezialist für nichtlineare Mechanik:
+- Entwicklung und Implementierung von Materialmodellen für PERMAS (u. a. anisotrope Plastizität und Mean-Field-Homogenisierung)
+- Entwicklung numerischer Verfahren zur Verbesserung der Robustheit und Konvergenz (z. B. Line Search)
+- Prozesssimulation für den Spritzguss mit OpenFOAM
+- Validierung und Verifikation neuer Materialmodelle
+- Technische Beratung führender Automobilhersteller bei komplexen Simulationsprojekten
+- Betreuung und fachliche Bewertung von Bachelor- und Masterarbeiten (Numerische Simulation, Materialmodellierung)
+- *Referenzperson*:
+  Dipl.-Ing. Markus Ast (ehem. CTO, Tel.: +49(176)32424715, E-Mail: mail@markus-ast.de, linkedin: markus-ast-b327a31a9)
+** Masterand                                                       :cventry:
+:PROPERTIES:
+:FROM:   <2018-12-01>
+:TO:     <2019-07-01>
+:LOCATION: Stuttgart, Deutschland
+:EMPLOYER: Ingenieurgesellschaft für Technische Software mbH (INTES GmbH)
+:END:
+Thema: „Implementierung eines neuen Materialgesetzes mit transversal isotroper Plastizität für den kommerziellen Finite-Elemente-Solver PERMAS“
+- Prototypische Entwicklung des Materialmodells in MATLAB (Finite Dehnung)
+- Implementierung in den FE-Solver PERMAS (Fortran)
+- Validierung anhand numerischer Referenzbeispiele
+ 
+** Werkstudent                                          :cventry:
+:PROPERTIES:
+:FROM:     <2017-11-01>
+:TO:     <2019-04-01>
+:LOCATION: Stuttgart, Deutschland
+:EMPLOYER: Kasaero GmbH
+:NOTE: Part time
+:END:
+Ultraleichtflugzeug-Entwicklung (EASA-, FAA- und CAAC-Standards):
+- Analytischer und numerischer Festigkeitsnachweis von Ultraleichtflugzeugen
+- Strukturauslegung und Unterstützung bei Zulassungsverfahren (Airworthiness)
+ 
+** Werkstudent                                                      :cventry:
+:PROPERTIES:
+:FROM:     <2018-07-01>
+:TO:     <2018-11-01>
+:LOCATION: Stuttgart, Deutschland
+:EMPLOYER: ITB Innovative Technische Berechnungen GmbH
+:END:
+Simulationen und Methodenentwicklung:
+- Simulation selektiver Laserschmelzprozesse für Metalle
+- Entwicklung thermomechanischer FE-Modelle einschließlich Phasenumwandlungen
+ 
+** Leitender Ingenieur: Hubschrauber  :cventry:
+:PROPERTIES:
+:FROM:   <2012-07-02>
+:TO:     <2015-07-13>
+:LOCATION: Liaoyang, China
+:EMPLOYER: Flugfeld Liaoyang
+:END:
+Hubschrauberinstandhaltung:
+- Leitung einer Hubschrauber-Bodenbesatzung
+- Organisation umfangreicher Wartungs- und Instandsetzungsmaßnahmen
+- Inspektion und Instandhaltung mechanischer Baugruppen
+- Freigabe von Luftfahrzeugen zum Flugbetrieb
+- Reparatur, Umbau und Wiederzulassung von Hubschraubern
+ 
+* Bildungsweg                                                     :cventries:
+:properties:
+# :pagebreak: t
+:end:
+** Promotion: Werkstoffmodellierung                                :cventry:
+:PROPERTIES:
+:FROM:     <2023-06-01>
+:TO:     aktuell
+:LOCATION: Renningen, Deutschland
+:SCHOOL: RWTH Aachen/Robert Bosch GmbH
+:END:
+Thema: „Größeneffekt in der mikromechanischen Fatigue-Modellierung“
+- Institut: Institut für Bildsame Formgebung (IBF)
+- Betreuer: Prof. Dr.-Ing. Sebastian Münstermann
+ 
+** Master of Science: Luft- und Raumfahrttechnik (1,5 - „sehr gut“) :cventry:
+:PROPERTIES:
+:FROM:     <2016-11-01>
+:TO:       <2019-07-08>
+:LOCATION: Stuttgart, Deutschland
+:SCHOOL: Universität Stuttgart
+:END:
+*Masterarbeit*:
+  „Implementierung eines neuen Materialgesetzes mit transversal isotroper Plastizität für den kommerziellen Finite-Elemente-Solver PERMAS“ (1,0 - „sehr gut“)
+- Vertiefungen:
+  - Numerische Mathematik:
+    Analytische und numerische Lösung partieller Differenzialgleichungen
+  - Werkstoffmechanik:
+    Experimentelle Materialcharakterisierung und -simulation
+ 
+** Bachelor of Engineering: Fluggerät-System und -Technik (Note: 83% - „gut“) :cventry:
+:PROPERTIES:
+:FROM:     <2008-09-01>
+:TO:       <2012-07-02>
+:LOCATION: Beijing, China
+:SCHOOL: PLA Army Aviation Academy
+:END:
+*Bachelorarbeit*: „Virtual Training System for Helicopter Maintenance“ (95% - „sehr gut“)
+- Vertiefungen:
+  - Theoretische Ausbildung:
+    Aufbau, Systeme, Fertigung und Instandhaltung von Hubschraubern und Wellenleistungstriebwerken
+  - Praktische Ausbildung:
+    Montage und Demontage von Hubschrauberkomponenten, Wartung, Instandsetzung und Reparatur
+ 
+* Sprachkenntnisse                                                 :cvskills:
+:properties:
+:CV_ENV: cvskills
+:end:
+- Deutsch :: TestDaF (entspricht C1), verhandlungssicher, Arbeitssprache seit 2017
+- Englisch :: CET-6, verhandlungssicher, Arbeitssprache seit 2019
+- Chinesisch :: Muttersprache
+ 
+* Technische Fähigkeiten                                           :cvskills:
+:properties:
+:CV_ENV: cvskills
+:end:
+- Programmierung :: C/C++, Fortran, Python-OOP, Matlab-OOP/Octave, VBA, emacs-lisp
+- Technische Softwareentwicklung :: Materialmodellierung, Numerische Algorithmen, Objektorientierte Entwicklung, JSON
+- KI-gestützte Entwicklung :: Claude Code, ChatGPT, MS365 Copilot
+- Numerische Simulation :: Abaqus, PERMAS, LS-Dyna, Digimat, Calculix, OpenFOAM, Moldflow
+- Pre-/Postprocessing :: MEDINA, ANSA, Visper, Abaqus-CAE, Gmsh
+- CAD :: Solidworks, FreeCAD
+- Programmierumgebung :: GNU Emacs (Power-User), Visual Studio Code, MS Visual Studio
+- Mathematik :: Analytische und numerische Lösung partieller Differenzialgleichungen, Tensoranalysis, Discontinuous-Galerkin-Verfahren
+ 
+* Soft-Skills
+- Analytisches Denken und Problemlösung
+- Systematische Arbeitsweise und Abstraktion hoch komplexer Themen
+- Interdisziplinärer Team-Spieler
+* Hobbys
+- Bogenschießen, Radtour, Wandern und Camping, Flamenco-Gitarre

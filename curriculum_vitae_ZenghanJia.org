@@ -1,0 +1,200 @@
+#+begin_src emacs-lisp :exports none
+  ;; (setq  calendar-month-abbrev-array ["Jan" "Feb" "Mrz" "Apr" "May" "Jun" "Jul" "Aug" "Sept" "Okt" "Nov" "Dez"])
+  (setq texname (format "%s.tex" (file-name-sans-extension buffer-file-name)))
+  (org-export-to-file 'awesomecv texname)
+  (org-latex-compile texname)
+#+end_src
+ 
+#+RESULTS:
+: /home/zh/doc/lebenslauf/de/curriculum_vitae_ZenghanJia.pdf
+ 
+:org-cv-settings:
+# CV color - options include: 'awesome-red (default), 'awesome-emerald,
+# 'awesome-skyblue', 'awesome-pink', 'awesome-orange', 'awesome-nephritis',
+# 'awesome-concrete' and 'awesome-darknight', plus any standard color names.
+#+CVCOLOR: darkblue
+# Specify the position and style of the photo
+#+PHOTOSTYLE: left,rectangle,noedge
+#+LATEX_TITLE: \makecvheader[R]
+#+LATEX_HEADER: \usepackage{wrapfig}
+#+LATEX_HEADER: \usepackage[none]{hyphenat}
+#+LATEX_CLASS_OPTIONS: [a4paper]
+# #+LATEX_HEADER: \usepackage[ngerman]{babel}
+# #+LATEX_HEADER: \usepackage[german]{isodate}
+#+OPTIONS: toc:nil
+:end:
+#+STARTUP: hideblocks
+#+TITLE: Curriculum Vitae
+ 
+:personal-info:
+#+AUTHOR: Zenghan Jia
+#+email: zh.j@web.de
+#+options: tags:nil
+ 
+#+ADDRESS: Stöckwiesenstraße 8, 70771 Leinfelden-Echterdingen, Germany
+#+MOBILE: (+49) 176-65265298
+# #+HOMEPAGE: example.com
+# #+GITHUB: Titan-C
+# #+GITLAB: Titan-C
+#+LINKEDIN: zenghan-jia
+#+PHOTO: ../bilder/passfoto.png
+:end:
+ 
+#+latex: \sloppy
+Simulation engineer and doctoral candidate with several years of experience in developing numerical methods and material models for commercial finite-element solvers. Core expertise in nonlinear mechanics, crystal plasticity, multiscale modeling and scientific software development, in particular the modeling of material behavior at the micrometer scale. Solid experience in developing efficient simulation algorithms and in transferring scientific methods into industrial applications.
+#+latex: \par
+ 
+* Professional Experience                                         :cventries:
+:PROPERTIES:
+:END:
+** Doctoral Candidate                                               :cventry:
+:PROPERTIES:
+:FROM:     <2023-06-01>
+:TO:       now
+:LOCATION: Renningen, Germany
+:EMPLOYER: Robert Bosch GmbH
+:END:
+Topic: “Size effect in micromechanical fatigue modeling”
+- Development of micromechanical fatigue models based on crystal plasticity, considering size effects.
+- Conception and implementation of numerical algorithms and material laws (UMAT/UEL in Abaqus), e.g., for stiff ODE systems.
+- Development of robust solution schemes for highly nonlinear systems of equations.
+- Development of automated simulation workflows (Python, OOP, JSON).
+- Validation of the models against experimental fatigue data in the high-cycle fatigue (HCF) regime.
+- *Reference*: Dr. Ralf Westerheide (Group Leader CR/AMP3, +49173-5341832)
+ 
+ 
+** CAE Software Engineer (PERMAS)                                   :cventry:
+:PROPERTIES:
+:FROM:     <2019-09-01>
+:TO:     <2023-04-01>
+:LOCATION: Stuttgart, Germany
+:EMPLOYER: Ingenieurgesellschaft für Technische Software mbH (INTES GmbH)
+:END:
+Specialist in Nonlinear Mechanics:
+- Development and implementation of material models for PERMAS (e.g., anisotropic plasticity, mean-field homogenization).
+- Development of numerical methods to improve robustness and convergence (e.g., Line-Search).
+- Process simulation for injection molding with OpenFOAM.
+- Validation and verification of new material models.
+- Technical consulting for leading automotive manufacturers on complex simulation projects.
+- Technical supervision and evaluation of Bachelor's and Master's theses (Numerical Simulation, Material Modeling).
+- *Reference*: Dipl.-Ing. Markus Ast (former CTO of INTES, Tel: +49176-32424715, Email: mail@markus-ast.de, linkedin: markus-ast-b327a31a9)
+ 
+** Master's Candidate                                               :cventry:
+:PROPERTIES:
+:FROM:   <2018-12-01>
+:TO:     <2019-07-01>
+:LOCATION: Stuttgart, Germany
+:EMPLOYER: Ingenieurgesellschaft für Technische Software mbH (INTES GmbH)
+:END:
+Topic: “Implementation of a new material model with transversely isotropic plasticity for the commercial finite-element solver PERMAS”
+- Prototype development of the material model in MATLAB (finite strain)
+- Implementation in the FE-solver PERMAS (Fortran)
+- Validation against numerical reference examples
+ 
+** Working Student                                                  :cventry:
+:PROPERTIES:
+:FROM:     <2017-11-01>
+:TO:     <2019-04-01>
+:LOCATION: Stuttgart, Germany
+:EMPLOYER: Kasaero GmbH
+:NOTE: Part time
+:END:
+Ultra-light Aircraft Design (EASA, FAA and CAAC standards):
+- Aircraft strength verification: analytical and numerical
+- Structural design and support of certification and airworthiness procedures
+ 
+** Working Student                                                  :cventry:
+:PROPERTIES:
+:FROM:     <2018-07-01>
+:TO:     <2018-11-01>
+:LOCATION: Stuttgart, Germany
+:EMPLOYER: ITB Innovative Technische Berechnungen GmbH
+:END:
+Simulations and method development:
+- Simulation of selective laser melting for metals
+- Development of thermomechanical finite-element models including phase transformations
+ 
+** Lead Engineer: Helicopters                                       :cventry:
+:PROPERTIES:
+:FROM:     <2012-07-02>
+:TO:     <2015-07-13>
+:LOCATION: Liaoyang, China
+:EMPLOYER: Airport Liaoyang
+:END:
+Maintenance of helicopter:
+- Management of the helicopter ground crew
+- Organization of extensive maintenance and overhaul measures
+- Inspection and servicing of mechanical helicopter components
+- Pre-flight clearance
+- Repair, modification, and airworthiness of the helicopter
+ 
+* Educational Background                                          :cventries:
+:properties:
+# :pagebreak: t
+:end:
+** PhD: Material Modeling                                :cventry:
+:PROPERTIES:
+:FROM:     <2023-06-01>
+:TO:     now
+:LOCATION: Renningen, Germany
+:SCHOOL: RWTH Aachen/Robert Bosch GmbH
+:END:
+Topic: “Size effect in micromechanical fatigue modeling”
+- Institute: Institut für Bildsame Formgebung (IBF)
+- Supervisor: Prof. Dr.-Ing. Sebastian Münstermann
+ 
+** Master of Science: Aerospace Engineering (1.5 - "very good") :cventry:
+:PROPERTIES:
+:FROM:     <2016-11-01>
+:TO:       <2019-07-08>
+:LOCATION: Stuttgart, Germany
+:SCHOOL: University of Stuttgart
+:END:
+*Master's Thesis*:
+“Implementation of a new material model with transversely isotropic plasticity for the commercial finite-element solver PERMAS” (1.0 – “very good”; German grading scale, 1.0 = best)
+- Specializations:
+  - Numerical Mathematics: Analytical and numerical solution of partial differential equations
+  - Material Mechanics: Experimental material characterization and simulation
+ 
+** Bachelor of Engineering: Aircraft System and Technologies (Note: 83% - “good”) :cventry:
+:PROPERTIES:
+:FROM:     <2008-09-01>
+:TO:       <2012-07-02>
+:LOCATION: Beijing, China
+:SCHOOL: PLA Army Aviation Academy
+:END:
+*Bachelor's Thesis*: “Virtual Training System for Helicopter Maintenance” (95% - “very good”)
+- Specializations:
+  - Theoretical knowledge: Structure, systems, manufacturing, and maintenance of helicopters and turboshaft engines
+  - Practical training: Helicopter component assembly and disassembly, maintenance, and repair
+ 
+* Languages                                                        :cvskills:
+:properties:
+:CV_ENV: cvskills
+:end:
+- German :: TestDaF (equivalent C1), business fluent, working language since 2017
+- English :: CET-6, business fluent, working language since 2019
+- Chinese :: native
+ 
+* Technical Skills                                                 :cvskills:
+:properties:
+:CV_ENV: cvskills
+:end:
+- Programming :: C/C++, Fortran, Python-OOP, Matlab-OOP/Octave, VBA, emacs-lisp
+- Scientific Software Development :: Material Modeling, Numerical Algorithms, Object-Oriented Development, JSON
+- AI-assisted Software Development :: Claude Code, ChatGPT, M365 Copilot
+- Numerical Simulation :: Abaqus, PERMAS, LS-Dyna, Digimat, Calculix, OpenFOAM, Moldflow
+- Pre-/Postprocessing :: MEDINA, ANSA, Visper, Abaqus-CAE, Gmsh
+- CAD :: Solidworks, FreeCAD
+- Programming Environments :: GNU Emacs (Power User), Visual Studio Code, MS Visual Studio
+- Mathematics :: Analytical and Numerical Solutions of PDE Systems, Tensor Analysis, Discontinuous Galerkin Method
+ 
+* Soft-Skills
+- Analytical thinking and problem-solving
+- Interdisciplinary team player
+- Systematic working approach and ability to abstract highly complex topics
+- Efficient time management
+ 
+* Interests
+- Archery, Bike touring, hiking and camping, Flamenco guitar
+ 
