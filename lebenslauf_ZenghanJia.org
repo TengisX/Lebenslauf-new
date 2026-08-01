@@ -38,7 +38,7 @@
 # #+GITHUB: Titan-C
 # #+GITLAB: Titan-C
 #+LINKEDIN: zenghan-jia
-#+PHOTO: ../bilder/passfoto.png
+#+PHOTO: ./bilder/passfoto.png
 :end:
  
 #+latex: \sloppy

@@ -6,7 +6,7 @@
 #+end_src
  
 #+RESULTS:
-: /home/zh/doc/lebenslauf/de/curriculum_vitae_ZenghanJia.pdf
+: /home/zh/doc/Lebenslauf/curriculum_vitae_ZenghanJia.pdf
  
 :org-cv-settings:
 # CV color - options include: 'awesome-red (default), 'awesome-emerald,
@@ -37,7 +37,7 @@
 # #+GITHUB: Titan-C
 # #+GITLAB: Titan-C
 #+LINKEDIN: zenghan-jia
-#+PHOTO: ../bilder/passfoto.png
+#+PHOTO: ./bilder/passfoto.png
 :end:
  
 #+latex: \sloppy
