@@ -184,6 +184,7 @@ Thema: „Größeneffekt in der mikromechanischen Fatigue-Modellierung“
 :CV_ENV: cvskills
 :end:
 - Programmierung :: C/C++, Fortran, Python-OOP, Matlab-OOP/Octave, VBA, emacs-lisp
+- CI/CD :: GitHub/Git, Bitbucket, hausinterne Versionsverwaltung
 - Technische Softwareentwicklung :: Materialmodellierung, Numerische Algorithmen, Objektorientierte Entwicklung, JSON
 - KI-gestützte Entwicklung :: Claude Code, ChatGPT, MS365 Copilot
 - Numerische Simulation :: Abaqus, PERMAS, LS-Dyna, Digimat, Calculix, OpenFOAM, Moldflow

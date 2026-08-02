@@ -130,7 +130,7 @@ Maintenance of helicopter:
  
 * Educational Background                                          :cventries:
 :properties:
-# :pagebreak: t
+:pagebreak: t
 :end:
 ** PhD: Material Modeling                                :cventry:
 :PROPERTIES:
@@ -181,6 +181,7 @@ Topic: “Size effect in micromechanical fatigue modeling”
 :CV_ENV: cvskills
 :end:
 - Programming :: C/C++, Fortran, Python-OOP, Matlab-OOP/Octave, VBA, emacs-lisp
+- CI/CD :: GitHub/Git, Bitbucket, custom-built CI/CD scripts
 - Scientific Software Development :: Material Modeling, Numerical Algorithms, Object-Oriented Development, JSON
 - AI-assisted Software Development :: Claude Code, ChatGPT, M365 Copilot
 - Numerical Simulation :: Abaqus, PERMAS, LS-Dyna, Digimat, Calculix, OpenFOAM, Moldflow
