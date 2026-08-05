@@ -42,7 +42,7 @@
 :end:
  
 #+latex: \sloppy
-Berechnungsingenieur und Doktorand mit langjähriger Erfahrung in der Entwicklung numerischer Verfahren und Materialmodelle für kommerzielle Finite-Elemente-Solver. Schwerpunkte liegen in der nichtlinearen Mechanik, Kristallplastizität, Mehrskalenmodellierung und wissenschaftlichen Softwareentwicklung, insbesondere in der Modellierung des Materialverhaltens auf der Mikrometerskala. Fundierte Erfahrung in der Entwicklung effizienter Simulationsalgorithmen sowie in der Überführung wissenschaftlicher Methoden in industrielle Anwendungen.
+Luft- und Raumfahrtingenieur und Doktorand mit Schwerpunkt auf Festigkeits- und Ermüdungsnachweisen: FEM und klassische Handrechnung, nichtlineare Struktur- und Kontaktanalyse, Materialmodellierung für kommerzielle FE-Solver. Ergänzt durch Praxis in der Hubschrauberinstandhaltung sowie in Auslegung und Zulassung von Luftfahrzeugen nach EASA- und FAA-Standards.
 #+latex: \par
 * Beruflicher Werdegang                                           :cventries:
 :PROPERTIES:
