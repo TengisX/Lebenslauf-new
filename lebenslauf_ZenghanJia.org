@@ -34,8 +34,8 @@
  
 #+ADDRESS: Stöckwiesenstraße 8, 70771 Leinfelden-Echterdingen, Deutschland
 #+MOBILE: (+49) 176-65265298
-# #+HOMEPAGE: example.com
-# #+GITHUB: Titan-C
+#+HOMEPAGE: https://codeberg.org/Tengis
+# #+GITHUB: https://codeberg.org/Tengis
 # #+GITLAB: Titan-C
 #+LINKEDIN: zenghan-jia
 #+PHOTO: ./bilder/passfoto.png
