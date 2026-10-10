@@ -2,7 +2,10 @@
   (setq  calendar-month-abbrev-array ["Jan" "Feb" "Mrz" "Apr" "May" "Jun" "Jul" "Aug" "Sept" "Okt" "Nov" "Dez"])
   (setq texname (format "%s.tex" (file-name-sans-extension buffer-file-name)))
   (org-export-to-file 'awesomecv texname)
-  (org-latex-compile texname)
+  (let ((pdf (org-latex-compile texname)))
+    (make-directory "pdf" t)
+    (rename-file pdf "pdf/" t)
+    (rename-file texname "build/" t))
   (setq calendar-month-abbrev-array (eval (car (get 'calendar-month-abbrev-array 'standard-value))))
 #+end_src
  
@@ -34,7 +37,7 @@
  
 #+ADDRESS: Stöckwiesenstraße 8, 70771 Leinfelden-Echterdingen, Deutschland
 #+MOBILE: (+49) 176-65265298
-#+HOMEPAGE: https://codeberg.org/Tengis
+#+HOMEPAGE: codeberg.org/Tengis
 # #+GITHUB: https://codeberg.org/Tengis
 # #+GITLAB: Titan-C
 #+LINKEDIN: zenghan-jia

@@ -1,13 +1,14 @@
-#+begin_src emacs-lisp :exports none
+#+begin_src emacs-lisp :exports none :results none
   ;; (setq  calendar-month-abbrev-array ["Jan" "Feb" "Mrz" "Apr" "May" "Jun" "Jul" "Aug" "Sept" "Okt" "Nov" "Dez"])
   (setq texname (format "%s.tex" (file-name-sans-extension buffer-file-name)))
   (org-export-to-file 'awesomecv texname)
-  (org-latex-compile texname)
+  (let ((pdf (org-latex-compile texname)))
+    (make-directory "pdf" t)
+    (rename-file pdf "pdf/" t)
+    (rename-file texname "build/" t))
 #+end_src
  
-#+RESULTS:
-: /home/zh/doc/Lebenslauf/curriculum_vitae_ZenghanJia.pdf
- 
+
 :org-cv-settings:
 # CV color - options include: 'awesome-red (default), 'awesome-emerald,
 # 'awesome-skyblue', 'awesome-pink', 'awesome-orange', 'awesome-nephritis',
@@ -33,7 +34,7 @@
  
 #+ADDRESS: Stöckwiesenstraße 8, 70771 Leinfelden-Echterdingen, Germany
 #+MOBILE: (+49) 176-65265298
-# #+HOMEPAGE: example.com
+#+HOMEPAGE: codeberg.org/Tengis
 # #+GITHUB: Titan-C
 # #+GITLAB: Titan-C
 #+LINKEDIN: zenghan-jia
